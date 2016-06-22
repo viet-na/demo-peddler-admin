@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="Peddler">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Peddler Admin</title>
+	<link rel="stylesheet" href="bower_components/AdminLTE/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+	<link rel="stylesheet" href="bower_components/AdminLTE/dist/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="bower_components/AdminLTE/dist/css/skins/_all-skins.min.css">
+	<link rel="stylesheet" href="bower_components/ladda/dist/ladda-themeless.min.css">
+	<link rel="stylesheet" href="bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.css">
+	<link rel="stylesheet" href="styles/css/main.css">
+  </head>
+<body ng-controller="MainController as MainCtrl" ng-class="MainCtrl.bodyClass()">
+	<div class="wrapper">
+	  <ui-view></ui-view>
+	</div>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+	<script src="bower_components/ladda/dist/spin.min.js"></script>
+	<script src="bower_components/ladda/dist/ladda.min.js"></script>
+	<script src="bower_components/AdminLTE/plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src="bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js"></script>
+	<script src="bower_components/AdminLTE/dist/js/app.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-touch/angular-touch.js"></script>
+	<script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
+	<script src="bower_components/ngstorage/ngStorage.js"></script>
+	<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/router.js"></script>
+	<script src="scripts/Constant/Constant.js"></script>
+	<script src="scripts/Factories/BaseObject.js"></script>
+	<script src="scripts/Factories/User.js"></script>
+	<script src="scripts/Factories/Auth.js"></script>
+	<script src="scripts/Factories/Product.js"></script>
+	<script src="scripts/Services/Products.js"></script>
+	<script src="scripts/Services/Users.js"></script>
+	<script src="scripts/Controllers/MainController.js"></script>
+	<script src="scripts/Controllers/DashboardController.js"></script>
+	<script src="scripts/Controllers/AuthController.js"></script>
+	<script src="scripts/Controllers/ProductController.js"></script>
+	<script src="scripts/Controllers/ListProductController.js"></script>
+</body>
+</html>

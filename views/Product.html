@@ -1,0 +1,25 @@
+<section class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-solid">
+	            <div class="box-header with-border">
+	            	<h3 class="box-title">Product view</h3>
+	            	<span class="pull-right fa fa-list" ui-sref="dashboard.products"></span>
+	            </div>
+	            <div class="box-body">
+	             	<dl class="dl-horizontal" ng-if="ProductCtrl.product">
+		                <dt>Product name:</dt>
+		                <dd ng-bind="ProductCtrl.product.getName()"></dd>
+		                <dt>Product price:</dt>
+		                <dd ng-bind="ProductCtrl.product.getPrice()"></dd>
+		                <dt>Description:</dt>
+		                <dd ng-bind="ProductCtrl.product.getDescription()"></dd>
+		                <dt>Created:</dt>
+		                <dd>{{ProductCtrl.product.getCreated() | date: 'dd-MM-yyyy'}}</dd>
+		            </dl>
+		            <p class="text-center" ng-if="!ProductCtrl.product">Product not found!</p>
+	            </div>
+          	</div>
+		</div>
+	</div>
+</section>

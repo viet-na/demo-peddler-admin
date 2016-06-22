@@ -1,0 +1,56 @@
+<section class="content-header">
+	<h1>Products</h1>
+	<div ng-if="ListProductCtrl.loading" class="loader"></div>
+</section>
+<section class="content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-default">
+				<div class="box-body">
+					<table id="list-product" class="table table-bordered table-striped dataTable">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th class="sorting" ng-click="ListProductCtrl.toggleSort('name')">Name</th>
+								<th class="sorting" ng-click="ListProductCtrl.toggleSort('price')">Price</th>
+								<th>Description</th>
+								<th class="sorting" ng-click="ListProductCtrl.toggleSort('created')">Created</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat="item in ListProductCtrl.listProducts">
+							<td>{{(ListProductCtrl.page-1) * ListProductCtrl.limit + $index + 1}}</td>
+							<td ng-bind="item.getName()"></td>
+							<td ng-bind="item.getPrice()"></td>
+							<td ng-bind="item.getDescription()"></td>
+							<td>{{item.getCreated() | date: 'dd-MM-yyyy'}}</td>
+							<td class="action">
+								<span class="fa fa-eye" title="View Product" ng-click="ListProductCtrl.showProduct(item.getId())"></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="row box-foot" >
+					<div ng-if="!ListProductCtrl.loading && ListProductCtrl.listUsers.length == 0" class="no-record col-md-12">No records found</div>
+				</div>
+				<div class="row box-foot" ng-if="ListProductCtrl.total > ListProductCtrl.limit && !ListProductCtrl.loading">
+					<div class="page-info col-md-5">
+						Showing {{(ListProductCtrl.page - 1) * ListProductCtrl.limit + 1}} to {{ListProductCtrl.page * ListProductCtrl.limit > ListProductCtrl.total?ListProductCtrl.total:ListProductCtrl.page * ListProductCtrl.limit}} of {{ListProductCtrl.total}} entries
+					</div>
+					<div class="paging-menu col-md-7" ng-if="!ListProductCtrl.loading">
+						<uib-pagination
+							boundary-links="true"
+							force-ellipses="true"
+							max-size="5"
+							total-items="ListProductCtrl.total"
+							items-per-page="ListProductCtrl.limit"
+							ng-model="ListProductCtrl.page"
+							ng-change="ListProductCtrl.pageChange()">
+						</uib-pagination>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
