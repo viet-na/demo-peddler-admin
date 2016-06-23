@@ -32,7 +32,7 @@
           self.loading = false;
         }, function(error) {
           self.loading = false;
-          self.messageError = 'Sign in error, please try agian!';
+          self.messageError = 'Server Internal Error, please try agian!';
         });
       } else {
         self.messageError = 'Please fill the form!';

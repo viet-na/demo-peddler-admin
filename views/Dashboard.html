@@ -35,7 +35,7 @@
 	  <ul class="sidebar-menu">
 		<li class="header">MAIN NAVIGATION</li>
 		<li ui-sref-active="active">
-			<a ui-sref="dashboard.products">
+			<a ui-sref="dashboard.products" ui-sref-opts="{reload:true}" ng-click="DashboardCtrl.resetList()">
 				<i class="fa fa-edit"></i> <span>Products</span>
 			</a>
 		</li>

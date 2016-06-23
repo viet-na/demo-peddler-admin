@@ -4,12 +4,13 @@
 
   angular.module('Peddler').controller('DashboardController', DashboardController);
 
-  DashboardController.$inject = ['User', 'Users', 'Auth', '$timeout', '$state'];
-  function DashboardController(User, Users, Auth, $timeout, $state) {
+  DashboardController.$inject = ['User', 'Users', 'Auth', '$timeout', '$state', '$localStorage'];
+  function DashboardController(User, Users, Auth, $timeout, $state, $localStorage) {
     var self = this;
     self.userInfo = null;
     self.getUserProfile = getUserProfile;
     self.signOut = signOut;
+    self.resetList = resetList;
 
     getUserProfile();
 
@@ -30,6 +31,11 @@
           $state.go('signIn');
         })
       });
+    }
+
+    function resetList() {
+      $localStorage.currentPage = 1;
+      $localStorage.currentOffset = 0;
     }
     
   }
