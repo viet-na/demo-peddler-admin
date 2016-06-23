@@ -7,8 +7,9 @@
 2. **Setup Loopback Framework**
  - Document install LoopBack: https://docs.strongloop.com/display/SL/Installing+StrongLoop
  - Connect Loopback with mongodb: https://docs.strongloop.com/display/public/LB/MongoDB+connector
- - At root folder, we need install node package module: npm install
- - Import mongodb from folder: db
+ - At root folder, we go to /server and install node package: npm install
+ - Please config connect mongodb at: /server/datasources.json
+ - Import mongodb from folder: db, you can use mongo command line import data
  - After make sure connect mongodb success, we will run server side at: /server with commandline: node .
 3. **Setup & run Angular admin**
  - I use admin template at: https://github.com/almasaeed2010/AdminLTE
@@ -16,3 +17,6 @@
  - Make sure you're install gulp & sass build
  - Build sass: gulp sass
  - Run Application: gulp
+ - Account test:
+   *Email: mr.nav90@gmail.com
+   *Password: 123456

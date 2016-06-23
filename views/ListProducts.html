@@ -11,10 +11,10 @@
 						<thead>
 							<tr>
 								<th>ID</th>
-								<th class="sorting" ng-click="ListProductCtrl.toggleSort('name')">Name</th>
-								<th class="sorting" ng-click="ListProductCtrl.toggleSort('price')">Price</th>
+								<th ng-class="{'sorting_asc': ListProductCtrl.sortType == 'asc', 'sorting_desc': ListProductCtrl.sortType == 'desc'}" ng-click="ListProductCtrl.toggleSort('name')">Name</th>
+								<th ng-class="{'sorting_asc': ListProductCtrl.sortType == 'asc', 'sorting_desc': ListProductCtrl.sortType == 'desc'}" ng-click="ListProductCtrl.toggleSort('price')">Price</th>
 								<th>Description</th>
-								<th class="sorting" ng-click="ListProductCtrl.toggleSort('created')">Created</th>
+								<th ng-class="{'sorting_asc': ListProductCtrl.sortType == 'asc', 'sorting_desc': ListProductCtrl.sortType == 'desc'}" ng-click="ListProductCtrl.toggleSort('created')">Created</th>
 								<th>Action</th>
 							</tr>
 						</thead>

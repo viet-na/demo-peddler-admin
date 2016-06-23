@@ -34,9 +34,15 @@ db.getCollection("AccessToken").insert({
   "userId": ObjectId("575f7910530962b40bbb8162")
 });
 db.getCollection("AccessToken").insert({
-  "_id": "eAOES7Kd7MrlZ1YkITG4fHl1pDIIA30YMSFyIJEtjtyClQSm9tBacYHNXODqXs4v",
+  "_id": "zq6hkDA3ybwywYjBQH6LdRyasIsqD1ewwMrEfohgab0bDoQDZMY1GFhq6QapJvBr",
   "ttl": NumberInt(1209600),
-  "created": ISODate("2016-06-14T09:29:36.704Z"),
+  "created": ISODate("2016-06-15T04:30:46.644Z"),
+  "userId": ObjectId("575f7910530962b40bbb8162")
+});
+db.getCollection("AccessToken").insert({
+  "_id": "TVnXRM8eAHCzTB9NvhdiofS02Wx0N80rot3ZJ2m8NoOHi9FuX6eTG7TlFVXVG9xJ",
+  "ttl": NumberInt(1209600),
+  "created": ISODate("2016-06-22T07:44:59.292Z"),
   "userId": ObjectId("575f7910530962b40bbb8162")
 });
 
@@ -47,6 +53,132 @@ db.getCollection("Product").insert({
   "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   "price": NumberInt(499),
   "created": ISODate("2016-06-14T00:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760d385cbabfaab038f1e8c"),
+  "name": "iPhone 6",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(399),
+  "created": ISODate("2016-06-15T00:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760d654cbabfaab038f1e8d"),
+  "name": "iPhone 5s",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(299),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760de22cbabfaab038f1e8e"),
+  "name": "iPad Pro",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(599),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760de59cbabfaab038f1e8f"),
+  "name": "iPad mini",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(299),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760def1cbabfaab038f1e90"),
+  "name": "iMac",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(2000),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760df65cbabfaab038f1e91"),
+  "name": "MacBook Pro",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(1200),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760dfa8cbabfaab038f1e92"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(1300),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760dfc1cbabfaab038f1e93"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(1500),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760e004cbabfaab038f1e94"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(1500),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760e012cbabfaab038f1e95"),
+  "name": "MacBook Pro",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(1200),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760e2e8cbabfaab038f1e96"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(1500),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760e2eecbabfaab038f1e97"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(599),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760e2f6cbabfaab038f1e98"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(599),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760e317cbabfaab038f1e99"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(1500),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760e321cbabfaab038f1e9a"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(1500),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760e334cbabfaab038f1e9b"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(1500),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760e37dcbabfaab038f1e9c"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(599),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
+});
+db.getCollection("Product").insert({
+  "_id": ObjectId("5760e383cbabfaab038f1e9d"),
+  "name": "MacBook Pro Rentina",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "price": NumberInt(2000),
+  "created": ISODate("2016-05-14T17:00:00.0Z")
 });
 
 /** User records **/
