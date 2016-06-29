@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha/Chai test</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai-spies/chai-spies.js"></script>
+    <script>
+      if (!mocha) {
+        console.log('You needs a mocha framework. Get it with "npm install" using npm.');
+      }
+      mocha.setup('bdd')
+    </script>
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/AdminLTE/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bower_components/ladda/dist/spin.min.js"></script>
+    <script src="../bower_components/ladda/dist/ladda.min.js"></script>
+    <script src="../bower_components/AdminLTE/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../bower_components/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="../bower_components/AdminLTE/dist/js/app.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-touch/angular-touch.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
+    <script src="../bower_components/ngstorage/ngStorage.js"></script>
+    <script src="../node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="../node_modules/angular-mocks/angular-mocks.js"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/router.js"></script>
+    <script src="../scripts/Constant/Constant.js"></script>
+    <script src="../scripts/Factories/BaseObject.js"></script>
+    <script src="../scripts/Factories/User.js"></script>
+    <script src="../scripts/Factories/Auth.js"></script>
+    <script src="../scripts/Factories/Product.js"></script>
+    <script src="../scripts/Services/Products.js"></script>
+    <script src="../scripts/Services/Users.js"></script>
+    <script src="../scripts/Controllers/MainController.js"></script>
+    <script src="../scripts/Controllers/DashboardController.js"></script>
+    <script src="../scripts/Controllers/AuthController.js"></script>
+    <script src="../scripts/Controllers/ProductController.js"></script>
+    <script src="../scripts/Controllers/ListProductController.js"></script>
+    <script src="Factories/User.test.js"></script>
+    <script src="Services/Users.test.js"></script>
+    <script src="Controllers/AuthController.test.js"></script>
+    <script src="Controllers/ListProductController.test.js"></script>
+
+    <script>mocha.run();</script>
+  </body>
+</html>

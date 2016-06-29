@@ -5,6 +5,7 @@
   angular.module('Peddler').controller('AuthController', AuthController);
 
   AuthController.$inject = ['Users', 'Auth', '$state'];
+
   function AuthController(Users, Auth, $state) {
     var self = this;
     self.loading = false;
@@ -32,7 +33,7 @@
           self.loading = false;
         }, function(error) {
           self.loading = false;
-          self.messageError = 'Server Internal Error, please try agian!';
+          self.messageError = 'Sign in error, please try agian!';
         });
       } else {
         self.messageError = 'Please fill the form!';

@@ -4,8 +4,8 @@
 
   angular.module('Peddler').service('Users', Users);
 
-  Users.$inject = ['$q', '$http', 'serverUrl', 'Auth'];
-  function Users($q, $http, serverUrl, Auth) {
+  Users.$inject = ['$q', '$http', 'serverUrl', 'Auth', '$timeout'];
+  function Users($q, $http, serverUrl, Auth, $timeout) {
     var Users = function() {
       var self = this;
       self.SignIn = SignIn;

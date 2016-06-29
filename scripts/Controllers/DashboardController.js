@@ -37,7 +37,7 @@
       $localStorage.currentPage = 1;
       $localStorage.currentOffset = 0;
     }
-    
+
   }
 
 })(angular);
