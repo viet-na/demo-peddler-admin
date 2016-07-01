@@ -19,30 +19,40 @@
     self.toggleSort = toggleSort;
     self.pageChange = pageChange;
     self.showProduct = showProduct;
+    self.getList = getList;
+    self.init = init;
+    self.getCount = getCount;
 
-    getList();
+    function init() {
+      getCount(function() {
+        getList();
+      })
+    }
+
+    function getCount(callback) {
+      Products.count().then(function(response) {
+        self.total = response.count;
+        if (typeof callback == 'function') callback()
+      });
+    }
 
     function getList() {
       self.loading = true;
-      Products.count().then(function(response) {
-        var params = {
-          'filter[limit]': self.limit,
-          'filter[offset]': self.offset
+      var params = {
+        'filter[limit]': self.limit,
+        'filter[offset]': self.offset
+      }
+      Products.list(params).then(function(response) {
+        if (!response.error) {
+          self.listProducts = [];
+          angular.forEach(response, function(value, key) {
+            var product = new Product(value);
+            self.listProducts.push(product);
+          })
         }
-
-        self.total = response.count;
-        Products.list(params).then(function(response) {
-          if (!response.error) {
-            self.listProducts = [];
-            angular.forEach(response, function(value, key) {
-              var product = new Product(value);
-              self.listProducts.push(product);
-            })
-          }
-          self.loading = false;
-        }, function(error) {
-          self.loading = false;
-        })
+        self.loading = false;
+      }, function(error) {
+        self.loading = false;
       })
     }
 
@@ -88,10 +98,10 @@
       if (self.isSort) {
         sortList(self.sortField, self.sortType);
       } else {
-        getList();
+        init();
       }
     }
-    
+
   }
 
 })(angular);

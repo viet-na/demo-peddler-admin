@@ -2,7 +2,7 @@
 	<h1>Products</h1>
 	<div ng-if="ListProductCtrl.loading" class="loader"></div>
 </section>
-<section class="content">
+<section class="content" ng-init="ListProductCtrl.init()">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="box box-default">
